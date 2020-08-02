@@ -1,0 +1,47 @@
+<core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m"
+		controllerName="flexapp.controller.Second" xmlns:html="http://www.w3.org/1999/xhtml">
+	<Page title="Menu Page">
+		<content>
+  		<Button
+			id="order"
+			type="Emphasized"
+			text="Create Order"
+			icon="sap-icon://sales-order"
+			press="onOrder"
+			class="sapUiSmallMargin"
+		/>	
+  		<Button
+			id="delivery"
+			type="Emphasized"
+			text="Deliver Order"
+			icon="sap-icon://shipping-status"
+			press="onDelivery"
+			class="sapUiSmallMargin"
+		/>	
+  		<Button
+			id="invoice"
+			type="Emphasized"
+			text="Invoice"
+			icon="sap-icon://simple-payment"
+			press="onInvoice"
+			class="sapUiSmallMargin"
+		/>	
+  		<Button
+			id="customer"
+			type="Emphasized"
+			text="Customers"
+			icon="sap-icon://add-contact"
+			press="onCustomer"
+			class="sapUiSmallMargin"
+		/>	
+		<Button
+			id="material"
+			type="Emphasized"
+			text="Materials"
+			icon="sap-icon://add-product"
+			press="onMaterial"
+			class="sapUiSmallMargin"
+		/>
+		</content>
+	</Page>
+</core:View>

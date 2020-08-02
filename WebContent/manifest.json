@@ -1,0 +1,132 @@
+{
+	"_version": "1.17.0",
+	"start_url": "index.html",
+	"sap.app": {
+		"id": "flexapp",
+		"type": "application",
+		"title": "foo",
+		"i18n": "i18n/i18n.properties",
+		"description": "bar",
+		"applicationVersion": {
+			"version": "1.0.0"
+		}
+	},
+	"sap.ui": {
+		"technology": "UI5",
+		"deviceTypes": {
+			"desktop": true,
+			"tablet": true,
+			"phone": true
+		},
+		"supportedThemes": [
+			"sap_belize_hcw",
+			"sap_belize_hcb",
+			"sap_belize",
+			"sap_belize_plus",
+			"sap_fiori_3",
+			"sap_fiori_3_dark",
+			"sap_fiori_3_hcb",
+			"sap_fiori_3_hcw"
+		]
+	},
+	"sap.ui5": {
+		"dependencies": {
+			"minUI5Version": "1.75.0",
+			"libs": {
+				"sap.ui.core": {},
+				"sap.m": {},
+				"sap.f": {},
+				"sap.ui.layout": {}
+			}
+		},
+		"resources": {
+		  
+		},
+		"contentDensities": {
+			"compact": true,
+			"cozy": true
+		},
+		"models": {
+			  "i18n": {
+				"type": "sap.ui.model.resource.ResourceModel",
+				"settings": {
+				  "bundleName": "flexapp.i18n.i18n"
+					}
+		  		}      
+		},
+		"rootView": {
+			"viewName": "flexapp.View.Root",
+			"id": "rootView",
+			"type": "XML",
+			"async": true
+		},
+		"routing": {
+			"config": {
+				"async": true,
+				"routerClass": "sap.f.routing.Router",
+				"viewType": "XML",
+				"viewPath": "flexapp.View",
+				"controlId": "fcl",
+				"transition": "slide",
+				"bypassed": {
+					"target": "notFound"
+				},
+				"homeRoute": "home"
+			},
+			"routes": {
+				"home": {
+					"pattern": "",
+					"target": ["home"],
+					"layout": "OneColumn",
+					"viewLevel": 1 
+				},
+				"Menu": {
+					"pattern": "Menu",
+					"target": ["Menu"],
+					"layout": "OneColumn",
+					"viewLevel": 2 
+				},
+				"material": {
+					"pattern": "material",
+					"target": ["matMaster"],
+					"layout": "OneColumn",
+					"viewLevel": 3 
+				},
+				"Detail":
+				{
+					"pattern": "Detail/{product}/{layout}",
+					"target": [ "matMaster", "matDetail" ],
+					"viewLevel": 3 
+ 				}				
+								
+			},
+			"targets": {
+				"home": {
+					"viewId": "First",
+					"viewName": "First",
+					"controlAggregation": "beginColumnPages"
+				},
+				"Menu": {
+					"viewId": "Second",
+					"viewName": "Second",
+					"controlAggregation": "beginColumnPages"
+				},		
+				"matMaster": {
+					"viewId": "matMaster",
+					"viewName": "matMaster",
+					"controlAggregation": "beginColumnPages"
+				},	
+				"matDetail": {
+					"viewId": "matDetail",
+					"viewName": "matDetail",
+					"controlAggregation": "midColumnPages"
+				},										
+				"notFound": {
+					"viewName": "Home",
+				  "controlAggregation": "beginColumnPages",
+					"transition": "fade"
+				}
+			}
+		}
+	}
+}

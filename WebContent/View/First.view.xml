@@ -1,0 +1,38 @@
+
+<mvc:View xmlns:mvc="sap.ui.core.mvc"
+  xmlns="sap.m"
+  xmlns:f="sap.f"
+  controllerName="flexapp.controller.First">
+  <f:DynamicPage>
+    <f:title>
+      <f:DynamicPageTitle>
+        <f:heading>
+          <Title text="{i18n>titlePage1}" />
+        </f:heading>
+      </f:DynamicPageTitle>
+    </f:title>
+    <f:content>
+			<FlexBox alignItems="Center" justifyContent="Center" direction ="Column">
+				<items>
+					<Image id="userlogoimage" src="images/user1.png" alt = "image loading" width="90px"></Image>
+				</items>
+				<items>
+					<Input id="userName" placeholder="User ID"></Input>
+				</items>
+				<items>
+					<Input id="password" placeholder="Password" type ="Password" ></Input>
+				</items>
+				<items>
+					<Button
+						id="helloButton"
+						type="Emphasized"
+						text="Login"
+						icon="sap-icon://sap-ui5"
+						press="onPress"
+						class="sapUiSmallMargin"
+						/>
+				</items>
+			</FlexBox>
+    </f:content>
+  </f:DynamicPage>
+</mvc:View>

@@ -1,0 +1,21 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc"
+  xmlns="sap.m"
+  xmlns:f="sap.f"
+  controllerName="flexapp.controller.Root"
+  height="100%">
+  <f:FlexibleColumnLayout id="fcl"
+    stateChange="onStateChanged"
+    restoreFocusOnBackNavigation="true"
+    layout="{/layout}"
+    backgroundDesign="Translucent"  >
+    <f:beginColumnPages>
+      <!-- To be added by Router -->
+    </f:beginColumnPages>
+    <f:midColumnPages>
+      <!-- To be added by Router -->
+    </f:midColumnPages>
+    <f:endColumnPages>
+      <!-- To be added by Router -->
+    </f:endColumnPages>
+  </f:FlexibleColumnLayout>
+</mvc:View>

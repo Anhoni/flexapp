@@ -1,0 +1,35 @@
+<core:View xmlns:core="sap.ui.core" 
+		   xmlns:mvc="sap.ui.core.mvc" 
+		   xmlns="sap.m"
+		   xmlns:f="sap.f"
+		controllerName="flexapp.controller.First" xmlns:html="http://www.w3.org/1999/xhtml">
+  <f:FlexibleColumnLayout id = "fcl">
+  <pages>		
+	<Page title="{i18n>titlePage1}">
+		<content>
+			<FlexBox alignItems="Center" justifyContent="Center" direction ="Column">
+				<items>
+					<Image id="userlogoimage" src="images/user1.png" alt = "image loading" width="90px"></Image>
+				</items>
+				<items>
+					<Input id="userName" placeholder="User ID"></Input>
+				</items>
+				<items>
+					<Input id="password" placeholder="Password" type ="Password" ></Input>
+				</items>
+				<items>
+					<Button
+						id="helloButton"
+						type="Emphasized"
+						text="Login"
+						icon="sap-icon://sap-ui5"
+						press="onPress"
+						class="sapUiSmallMargin"
+						/>
+				</items>
+			</FlexBox>
+		</content>
+	</Page>
+	</pages>
+</f:FlexibleColumnLayout>	
+</core:View>
